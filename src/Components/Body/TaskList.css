@@ -1,0 +1,60 @@
+body {
+  margin: 0; /* Elimina el margen por defecto del body */
+}
+
+.task-list-container {
+  font-family: 'Fuzzy Bubbles', sans-serif;
+  max-width: 400px; 
+  margin: auto;
+  position: relative; 
+}
+
+/* Línea vertical en toda la página */
+.vertical-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 13%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-color: #e38888;
+}
+
+.folder-sheet {
+  border: 2px solid #d1cfcf;
+  overflow: hidden;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.empty-row {
+  height: 25px; /* Altura del primer renglón */
+  border-top: 1px dashed #d1cece; /* Líneas punteada superior */
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #f1f0f0; /* Líneas horizontales suaves */
+}
+
+.left-column {
+  width: 13%; /* Ancho del cuadrado izquierdo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-square {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff; /* Color del cuadrado */
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #d1cfcf;
+}
+
+.right-column {
+  flex: 1;
+  padding: 10px; /* Espaciado para la descripción de la tarea */
+}
