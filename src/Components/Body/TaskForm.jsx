@@ -1,30 +1,35 @@
-
 import React, { useState } from 'react';
+import './TaskForm.css';
 
 const TaskForm = ({ onAddTask }) => {
-  const [newTask, setNewTask] = useState('');
+  const [newTaskDescription, setNewTaskDescription] = useState('');
 
-  const handleInputChange = (e) => {
-    setNewTask(e.target.value);
-  };
-
-  const handleAddTask = () => {
-    // Validación: No agregar tarea vacía
-    if (newTask.trim() !== '') {
-      onAddTask(newTask);
-      setNewTask('');
+  const handleButtonClick = () => {
+    // Verificar que haya una descripción antes de agregar la tarea
+    if (newTaskDescription.trim() !== '') {
+      onAddTask(newTaskDescription);
+      setNewTaskDescription('');
     }
   };
 
+  //Para guardar en el Local Storage del navegador el valor.
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem('tasks', newTaskDescription );
+    setNewTaskDescription('');
+    onAddTask(newTaskDescription)
+    };
+
   return (
-    <div className="task-form-container">
-      <input
-        type="text"
-        placeholder="Enter a new task"
-        value={newTask}
-        onChange={handleInputChange}
-      />
-      <button onClick={handleAddTask}>Add Task</button>
+    <div className="todo-list-container">
+     <div className="header">
+      <div className="title">Todo List</div>
+        <div className="add-button-container">
+         <button className="add-button" onClick={handleButtonClick}>
+           +
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

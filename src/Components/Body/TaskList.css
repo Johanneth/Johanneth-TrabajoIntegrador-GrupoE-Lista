@@ -1,5 +1,7 @@
+
 body {
-  margin: 0; /* Elimina el margen por defecto del body */
+  margin:100px;   
+
 }
 
 .task-list-container {
@@ -13,12 +15,14 @@ body {
 .vertical-line {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 35px;
   left: 13%;
   transform: translateX(-50%);
   width: 2px;
   background-color: #e38888;
+  margin-right: 20px; /* Ajusta este valor según sea necesario */
 }
+
 
 .folder-sheet {
   border: 2px solid #d1cfcf;
@@ -46,8 +50,8 @@ body {
 }
 
 .event-square {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 24px;
   background-color: #ffffff; /* Color del cuadrado */
   border-radius: 5px;
   cursor: pointer;
@@ -56,5 +60,13 @@ body {
 
 .right-column {
   flex: 1;
-  padding: 10px; /* Espaciado para la descripción de la tarea */
+  padding: 15px; /* Espaciado para la descripción de la tarea */
+}
+
+.new-task-input-bottom{
+  text-align: center;
+  margin-top: 6px;
+  font-size: 14px;
+  color:#9b97a3;
+
 }

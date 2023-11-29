@@ -1,0 +1,18 @@
+.tarea-tick {
+  color: #a2ba58; /* Color verde para el tilde */
+  font-size: 20px;
+  display: none;
+}
+
+.task-row.completed .tarea-tick {
+  display: inline-block;
+}
+
+.completed-task {
+  color: #aaa; /* Gris suave para texto bloqueado */
+  pointer-events:none; /* Evita acciones del mouse en elementos bloqueados */
+}
+
+.tarea-x{
+  color: rgb(219, 109, 109);
+}

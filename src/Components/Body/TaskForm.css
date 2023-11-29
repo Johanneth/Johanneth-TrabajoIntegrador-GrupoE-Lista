@@ -1,0 +1,46 @@
+.todo-list-container {
+  max-width: 400px; 
+  margin:auto;
+}
+
+.header {
+  background: linear-gradient(to bottom, #747474, #2f2e2e);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.title {
+  font-size: 18px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.add-button {
+  background: linear-gradient(to bottom, #747474, #2f2e2e);
+  color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+
+/* Nuevos estilos para el input al final de la página */
+.new-task-input-bottom {
+  margin-top: 20px; /* Ajusta la separación desde el contenido anterior */
+}
+
+.new-task-input-bottom input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
