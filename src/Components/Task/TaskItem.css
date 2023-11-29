@@ -1,0 +1,22 @@
+.tarea-tick {
+  color: #00ff15; 
+  font-size: 20px;
+  display: none;
+}
+
+.completed-task {
+  text-decoration: line-through; 
+  font-weight: bold; 
+}
+
+.task-row.completed .tarea-tick {
+  display: inline-block;
+}
+
+.task-row.completed .right-column div {
+  color: #000; 
+}
+
+.tarea-x{
+  color: rgb(252, 0, 0);
+}

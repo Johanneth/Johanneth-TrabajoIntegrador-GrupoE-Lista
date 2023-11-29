@@ -1,0 +1,147 @@
+
+body {
+  margin:10%;   
+}
+
+.task-list-container {
+  font-family: 'Fuzzy Bubbles', sans-serif;
+  max-width: 30%; 
+  margin: auto;
+  position: relative;  
+}
+
+.task-row {
+  display: flex;
+  margin-top: 10px; 
+}
+
+.task-row input[type="text"],
+.task-row button {
+  margin-right: 10px; 
+}
+
+.folder-sheet div{
+  color: #bbbbbb;
+}
+
+.vertical-line {
+  position: absolute;
+  top: 0;
+  bottom: 37px;
+  left: 13%;
+  transform: translateX(-50%);
+  width: 3px;
+  background-color: #f8cece;
+  margin-right: 20px;
+}
+
+.vertical-line-new {
+  position: absolute;
+  top: 0;
+  bottom: 37px;
+  left: 14%;
+  transform: translateX(-50%);
+  width: 1px;
+  background-color: #f4e4e4;
+  margin-right: 20px;
+}
+
+.folder-sheet {
+  border: 2px solid #d1cfcf;
+  overflow: hidden;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.empty-row {
+  height: 25px; 
+  border-top: 1px dashed #d1cece;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #f1f0f0;
+}
+
+.left-column {
+  width: 13%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-square {
+  width: 18px;
+  height: 24px;
+  background-color: #ffffff; 
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #d1cfcf;
+}
+
+.right-column {
+  flex: 1;
+  padding: 1vw; 
+}
+
+.new-task-input-bottom{
+  text-align: center;
+  margin-top: 6px;
+  font-size: 14px;
+  color:#9b97a3;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .task-list-container {
+    max-width: 100%;
+  }
+
+  .left-column {
+    width: 100%;
+  }
+
+  .vertical-line {
+    left: 15%;
+  }
+
+  .vertical-line-new {
+    left: 16%; 
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .task-list-container {
+    max-width: 100%;
+  }
+
+  .left-column {
+    width: 100%;
+  }
+
+  .vertical-line {
+    left: 15%;
+  }
+
+  .vertical-line-new {
+    left: 16%; 
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 740px) {
+  .task-list-container {
+    max-width: 100%;
+  }
+
+  .left-column {
+    width: 100%;
+  }
+
+  .vertical-line {
+    left: 15%;
+  }
+
+  .vertical-line-new {
+    left: 16%; 
+  }
+}
