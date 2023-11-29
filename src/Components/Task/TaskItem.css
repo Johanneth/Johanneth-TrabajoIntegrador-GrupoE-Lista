@@ -1,0 +1,17 @@
+.tarea-tick {
+  color: #a2ba58; /* Color verde para el tilde */
+  font-size: 20px;
+  display: none;
+}
+
+.task-row.completed .tarea-tick {
+  display: inline-block;
+}
+
+.task-row.completed .right-column div {
+  color: #000; /* Cambia a negro cuando la tarea está completada */
+}
+
+.tarea-x{
+  color: rgb(219, 109, 109);
+}
