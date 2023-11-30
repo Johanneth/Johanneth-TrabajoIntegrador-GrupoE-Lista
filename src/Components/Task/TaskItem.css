@@ -1,17 +1,44 @@
 .tarea-tick {
-  color: #a2ba58; /* Color verde para el tilde */
-  font-size: 20px;
-  display: none;
+    color: #a2ba58; /* Color verde para el tilde */
+    font-size: 20px;
+    display: none;
+  }
+  
+  .task-row.completed .tarea-tick {
+    display: inline-block;
+  }
+
+  .task-row.completed .right-column div {
+    color: #000; /* Cambia a negro cuando la tarea está completada */
+  }
+  
+  .tarea-x{
+    color: rgb(219, 109, 109);
+  }
+
+  .delete-confirmation{
+    border:none;
+    padding:1px;
+    text-align:center;
+    cursor:pointer;
+    font-size: 11px;
+    border-radius: 10px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     
+  }
+  
+  /* Media query para pantallas más pequeñas */
+@media only screen and (max-width: 600px) {
+  .delete-confirmation {
+    height:auto;
+  }
 }
 
-.task-row.completed .tarea-tick {
-  display: inline-block;
-}
 
-.task-row.completed .right-column div {
-  color: #000; /* Cambia a negro cuando la tarea está completada */
-}
-
-.tarea-x{
-  color: rgb(219, 109, 109);
+/* Estilos para los botones */
+.delete-confirmation button {
+  width: 20%; /* Los botones ocupan todo el ancho */
 }

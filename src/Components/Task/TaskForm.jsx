@@ -4,22 +4,30 @@ import './TaskForm.css';
 
 const TaskForm = ({ onAddTask }) => {
   const [newTaskDescription, setNewTaskDescription] = useState('');
+  const [isInputVisible, setIsInputVisible] = useState(false);
 
   const handleButtonClick = () => {
-    // Verificar que haya una descripción antes de agregar la tarea
-    if (newTaskDescription.trim() !== '') {
-      onAddTask(newTaskDescription);
-      setNewTaskDescription('');
+    setIsInputVisible(true);
+  };
+
+  const handleInputChange = (e) => {
+    setNewTaskDescription(e.target.value);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleButtonClick();
     }
   };
 
-  //Para guardar en el Local Storage del navegador el valor.
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    localStorage.setItem('tasks', newTaskDescription );
-    setNewTaskDescription('');
-    onAddTask(newTaskDescription)
+  const handleAddTask = () => {
+    if (newTaskDescription.trim() !== '') {
+      onAddTask(newTaskDescription);
+      setNewTaskDescription('');
+      setIsInputVisible(false); // Oculta el input después de agregar la tarea
+    }
     };
+
 
   return (
     <div className="todo-list-container">
@@ -31,8 +39,20 @@ const TaskForm = ({ onAddTask }) => {
           </button>
         </div>
       </div>
+      {isInputVisible && (
+        <div className='inputTask'>
+      <input
+        type="text"
+        placeholder="New Task..."
+        value={newTaskDescription}
+        onChange={handleInputChange}
+        onKeyDown={handleKeyDown}
+      />
+      <button className='btnAdd' onClick={handleAddTask}>Add Task</button>
     </div>
-  );
+  )}
+  </div>
+);
 };
 
 export default TaskForm;
