@@ -38,16 +38,7 @@ const TaskList = ({ tasks, onTaskComplete, onDeleteTask, onEditTask, onSaveEdit,
             onSaveEdit={onSaveEdit}
           />
         ))}
-        <div className="task-row">
-          <input
-            type="text"
-            placeholder="New Task..."
-            value={newTaskDescription}
-            onChange={handleInputChange}
-            onKeyDown={handleKeyDown}
-          />
-          <button onClick={handleAddTask}>+</button>
-        </div>
+       
       </div>
     </div>
   );

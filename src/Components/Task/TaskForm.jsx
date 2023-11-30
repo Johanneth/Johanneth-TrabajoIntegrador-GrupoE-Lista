@@ -23,7 +23,16 @@ const TaskForm = ({ onAddTask }) => {
     <div className="todo-list-container">
      <div className="header">
       <div className="title">Todo List</div>
-        <div className="add-button-container">
+        <div className="add-button-container"> <div className="task-row">
+          <input
+            type="text"
+            placeholder="New Task..."
+           // value={newTaskDescription}
+            //onChange={handleInputChange}
+            //onKeyDown={handleKeyDown}
+          />
+          <button>+</button>
+        </div>
         </div>
       </div>
     </div>
