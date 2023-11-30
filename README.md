@@ -69,10 +69,6 @@ Se muestra a través de las imágenes las distintas funcionalidades que tiene el
 
 <hr>
 
-## 📁 Acceso al proyecto
-
-El proyecto se puede descargar desde el repositorio de GitHub: https://github.com/BaudraccoA/Trabajo-Final-Integrador-React-master
-o pueden buscarlo por BaudraccoA, es público. Pueden clonarlo desde GitHub y bajarlo a su PC.
 
 ## 🛠️ Abre y ejecuta el proyecto
 
